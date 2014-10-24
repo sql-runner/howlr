@@ -1,3 +1,14 @@
 <h3>Howlr Dashboard User Page</h3>
 
 
+<cite>
+  <b>
+    Howl at the Moon?
+  </b>
+</cite>
+<fieldset>
+  <%= form_for @shout do |shout| %>
+    <%= form.text_field :content, placeholder: "Enter Howl" %>
+    <%= form.submit %>
+  <% end %>
+</fieldset>
