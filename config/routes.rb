@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     root "sessions#new"
   end
 
+  resources :howls, only: [:create]
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 

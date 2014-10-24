@@ -7,8 +7,8 @@
   </b>
 </cite>
 <fieldset>
-  <%= form_for @howl do |howl| %>
-    <%= form.text_field :content, placeholder: "Enter Howl" %>
-    <%= form.submit %>
+  <%= form_for @howl do |f| %>
+    <%= f.text_field :content, placeholder: "Enter Howl" %>
+    <%= f.submit %>
   <% end %>
 </fieldset>
