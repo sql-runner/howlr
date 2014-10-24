@@ -9,8 +9,12 @@
 <body>
 
 <% if signed_in? %>
-  <%= "Welcome #{current_user.email.capitalize}" %>
-  <%= link_to "Sign out", session_path, method: :delete %>
+  <div>
+    <h2><%= "Signed in As: #{current_user.email.capitalize}" %></h2>
+  </div>
+  <div>
+    <%= link_to "Sign out", session_path, method: :delete %>
+  </div>  
 <% else %>
   <%= link_to "Sign in", new_session_path %>
   <%= link_to "Sign up", new_user_path %>
