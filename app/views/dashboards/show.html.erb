@@ -12,3 +12,13 @@
     <%= f.submit %>
   <% end %>
 </fieldset>
+<br>
+<br>
+<div>
+  <% current_user.howls.each do |howl| %>
+    <div>
+      <%= howl.content %>&nbsp&nbsp By: <%= current_user.username %>
+    </div>
+  <% end %>
+</div>
+

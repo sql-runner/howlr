@@ -1,13 +1,13 @@
 class HowlsController < ApplicationController
 
   def create
-    howl = Howl.new(howl_params)
-    current_user.howls.create(howl)
+
+    current_user.howls.new(howl_params)
 
     if current_user.save
-      redirect_to :root
+      redirect_to dashboard_path
     else
-      render :back
+      redirect_to dashboard_path
     end
 
   end
