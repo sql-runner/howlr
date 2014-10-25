@@ -1,3 +1,6 @@
-<h4><%= @user.username %> Page</h4>
+<h3><%= @user.username.capitalize %> Page</h3>
 
+<aside>
+  <%= render @user.howls %>
+</aside>
 
