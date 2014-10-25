@@ -9,8 +9,9 @@
 <div>
   <%= pluralize(@user.followers.count, "follower") %>
 </div>
+<br>
 
-<aside>
+<fieldset>
   <%= render @user.howls %>
-</aside>
+</fieldset>
 

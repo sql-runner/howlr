@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Howlr</title>
-</head>
-<body>
+  <head>
+    <title>Howlr</title>
+  </head>
+  <body>
+      <% if signed_in? %>
+    <center>
+        <div>
+          <h2>
+            <%= "Signed in As: #{current_user.username.capitalize}" %>
+          </h2>
+        </div>
+        <div>
+          <%= button_to "Sign out", session_path, method: :delete %>
+        </div>
+    </center>
+      <% else %>
+        <%= link_to "Sign in", new_session_path %>
+        <%= link_to "Sign up", new_user_path %>
+      <% end %>
 
-<% if signed_in? %>
-  <div>
-    <h2>
-      <%= "Signed in As: #{current_user.username.capitalize}" %>
-    </h2>
-  </div>
-  <div>
-    <%= button_to "Sign out", session_path, method: :delete %>
-  </div>
-<% else %>
-  <%= link_to "Sign in", new_session_path %>
-  <%= link_to "Sign up", new_user_path %>
-<% end %>
-
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </body>
 </html>
