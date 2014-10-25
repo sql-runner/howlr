@@ -17,7 +17,8 @@
 <div>
   <% current_user.howls.each do |howl| %>
     <div>
-      <%= howl.content %>&nbsp&nbsp By: <%= current_user.username %>
+      <%= howl.content %>&nbsp&nbsp By: 
+      <%= link_to howl.user.username, howl.user %>
     </div>
   <% end %>
 </div>
