@@ -7,7 +7,7 @@
 <% end %>
 
 <div>
-  <%= @user.followers.count %>
+  <%= pluralize(@user.followers.count, "follower") %>
 </div>
 
 <aside>

@@ -9,7 +9,7 @@ class FollowRelationshipsController < ApplicationController
 
   def destroy
     user = User.find_by(username: params[:id])
-    current_user.followed_users.destroy(user)
+    current_user.followed_users.delete(user)
 
     redirect_to :back
 
