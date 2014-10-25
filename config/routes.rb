@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create, :show] do
     member do
-      get "follow", to: "followrelationships#create"
+      post "follow", to: "follow_relationships#create"
     end
   end
 
