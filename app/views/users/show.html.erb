@@ -1,6 +1,15 @@
 <h3><%= @user.username.capitalize %> Page</h3>
 
-<%= button_to "Follow", follow_user_path %>
+<% if current_user.followed_users.include? @user %>
+  <%= button_to "Unfollow", follow_user_path, method: :delete %>
+<% else %>
+  <%= button_to "Follow", follow_user_path %>
+<% end %>
+
+<div>
+  <%= @user.followers.count %>
+</div>
+
 <aside>
   <%= render @user.howls %>
 </aside>

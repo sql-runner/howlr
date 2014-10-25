@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show] do
     member do
       post "follow", to: "follow_relationships#create"
+      post "follow", to: "follow_relationships#destroy"
     end
   end
 
