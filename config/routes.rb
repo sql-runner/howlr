@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   resources :howls, only: [:create]
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    member do
+      get "follow", to: "followrelationships#create"
+    end
+  end
+
 
 end

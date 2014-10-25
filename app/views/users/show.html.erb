@@ -1,5 +1,6 @@
 <h3><%= @user.username.capitalize %> Page</h3>
 
+<%= button_to "Follow", follow_user_path %>
 <aside>
   <%= render @user.howls %>
 </aside>
