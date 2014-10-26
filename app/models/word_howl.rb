@@ -1,3 +1,3 @@
 class WordHowl < ActiveRecord::Base
-  belongs_to :howl, as: :content
+  has_one :howl, as: :content
 end
