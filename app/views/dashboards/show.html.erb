@@ -12,6 +12,7 @@
   <% end %>
   <%= form_for @imagehowl, url: image_howls_path, html: {multipart: true} do |f| %>
       <%= f.file_field :avatar %>
+      <%= f.submit %>
     <% end %>
 </fieldset>
 <br>

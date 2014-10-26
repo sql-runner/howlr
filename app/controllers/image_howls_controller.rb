@@ -1,7 +1,7 @@
 class ImageHowlsController < ApplicationController
 
   def create
-    image_howl = ImageHowl.new(image_howl_params)
+    image_howl = ImageHowl.create(image_howl_params)
     @howl = current_user.howls.new(content: image_howl)
 
     if @howl.save
