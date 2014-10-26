@@ -1,7 +1,7 @@
 <div>
   <%= link_to howl.user.username, howl.user %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   <%= time_ago_in_words(howl.created_at) %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <%= howl.content %>
+  <%= render howl.content %>
   <br>
   <br>
 </div>
