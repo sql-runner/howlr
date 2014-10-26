@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :word_howls, only: [:create]
 
 end

@@ -1,7 +1,8 @@
 class DashboardsController < ApplicationController
 
   def show
-    @howl = Howl.new
+    @wordhowl = WordHowl.new
+
   end
 
 end
