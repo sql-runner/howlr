@@ -10,9 +10,9 @@
     <%= f.text_field :body, placeholder: "Enter Howl" %>
     <%= f.submit %>
   <% end %>
-  <%= form_for @imagehowl do |f| %>
-    <%= f.text_field :body, placeholder: "Enter Howl" %>
-    <%= f.submit %>
+  <%= form_for @imagehowl, url: image_howls_path, html: {multipart: true} do |f| %>
+      <%= f.file_field :avatar %>
+    <% end %>
 </fieldset>
 <br>
 <br>
