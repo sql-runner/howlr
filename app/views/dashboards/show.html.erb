@@ -7,13 +7,13 @@
 </cite>
 <fieldset>
   <%= form_for @wordhowl do |f| %>
-    <%= f.text_field :content, placeholder: "Enter Howl" %>
+    <%= f.text_field :body, placeholder: "Enter Howl" %>
     <%= f.submit %>
   <% end %>
 </fieldset>
 <br>
 <br>
 <div>
-  <%= render current_user.word_howls %>
+  <%= render current_user.howls %>
 </div>
 
