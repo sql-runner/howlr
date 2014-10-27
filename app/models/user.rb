@@ -16,6 +16,14 @@ class User < ActiveRecord::Base
     Howl.where(user_id: followed_user_ids).order(created_at: :desc) 
   end
 
+  def follow(user)
+    followed_users << user 
+  end
+
+  def unfollow(user)
+    followed_users.delete user
+  end
+
 
   def to_param
     username
