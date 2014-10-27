@@ -12,6 +12,11 @@ class User < ActiveRecord::Base
 
   has_many :howls
 
+  def timeline
+    Howl.where(user_id: followed_user_ids).order(created_at: :desc) 
+  end
+
+
   def to_param
     username
   end

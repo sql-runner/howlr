@@ -18,6 +18,7 @@
 <br>
 <br>
 <div>
-  <%= render current_user.followed_users %>
+  <%= render @timeline %>
+  <%= paginate @timeline %>
 </div>
 
