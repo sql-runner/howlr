@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 
   has_many :howls
 
+  has_many :liked_howls, through: :likes
+
   def timeline
     Howl.where(user_id: followed_user_ids + [id]).order(created_at: :desc)
 
